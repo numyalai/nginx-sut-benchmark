@@ -5,7 +5,7 @@ SUTinstanceName="nginx-sut-r"$run
 SUT_IP="$(gcloud compute instances describe $SUTinstanceName --zone='europe-west3-c' --format='get(networkInterfaces[0].accessConfigs[0].natIP)')"
 echo "SUT IP is $SUT_IP"
 
-Autostart services https://askubuntu.com/questions/1367139/apt-get-upgrade-auto-restart-services
+#Autostart services https://askubuntu.com/questions/1367139/apt-get-upgrade-auto-restart-services
 cmd="export DEBIAN_FRONTEND=noninteractive"
 echo $cmd
 
