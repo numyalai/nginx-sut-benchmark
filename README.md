@@ -61,8 +61,8 @@ To run this project locally, follow these steps:
    terraform apply --auto-approve
    terraform destroy --auto-approve
      
-   chmod +x prepare_benchmark_client.sh
-   ./prepare_benchmark_client.sh
+   chmod +x prepare_sut_benchmark.sh
+   ./prepare_sut_benchmark.sh
    wait until the script finishes executing
    cd ../
    chmod +x runBenchmark.sk
