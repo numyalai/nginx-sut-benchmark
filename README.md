@@ -24,7 +24,7 @@ System Under Test (SUT): A Java-based load generator sends HTTP GET Requests to 
 
 ## Load Generator Implementation
 
-The load for the System Under Test (SUT) is generated using Java's `HttpClient` and `HttpUrlConnection` libraries.
+The load for the System Under Test (SUT) is generated using Java's `HttpUrlConnection` libraries.
 
 ## Measurement Metrics
 
