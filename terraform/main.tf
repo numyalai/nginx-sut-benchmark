@@ -22,7 +22,7 @@ resource "google_compute_firewall" "all" {
   source_ranges = ["0.0.0.0/0"]
 }
 
-### Benchmark Client
+### Benchmark SUT
 resource "google_compute_instance" "nginx" {
   name         = "nginx-sut-r1"
   machine_type = "e2-standard-2"
@@ -45,6 +45,57 @@ resource "google_compute_instance" "nginx" {
     }
   }
 }
+
+
+### Benchmark Server 2
+# resource "google_compute_instance" "nginx-sut-r2" {
+#   name         = "nginx-sut-r2"
+#   machine_type = "e2-standard-2"
+#   zone = "europe-west3-c"
+
+#   boot_disk {
+#     initialize_params {
+#       image = "projects/debian-cloud/global/images/debian-12-bookworm-v20240213"
+#       size = 10
+#       type="pd-balanced"
+#     }
+#   }
+
+#   metadata_startup_script = file("startup_sut.sh")
+
+#   network_interface {
+#     network = google_compute_network.vpc_network.id
+#     access_config {
+#       # Include this section to give the VM an external IP address
+#     }
+#   }
+# }
+
+
+
+### Benchmark Server 3
+# resource "google_compute_instance" "nginx-sut-r3" {
+#   name         = "nginx-sut-r3"
+#   machine_type = "e2-standard-2"
+#   zone = "europe-west3-c"
+
+#   boot_disk {
+#     initialize_params {
+#       image = "projects/debian-cloud/global/images/debian-12-bookworm-v20240213"
+#       size = 10
+#       type="pd-balanced"
+#     }
+#   }
+
+#   metadata_startup_script = file("startup_sut.sh")
+
+#   network_interface {
+#     network = google_compute_network.vpc_network.id
+#     access_config {
+#       # Include this section to give the VM an external IP address
+#     }
+#   }
+# }
 
 
 ### Benchmark Client

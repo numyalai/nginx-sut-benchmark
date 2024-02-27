@@ -1,8 +1,7 @@
 run=$1
 clientInstanceName="client-r"$run
-SUTinstanceName="nginx-sut-r"$run
 clientContainerName="load-generator-"$run
-
+loadBalancerInstanceName="nginx-load-balancer"
 
 
 duration=300
@@ -13,7 +12,7 @@ small_file="1mb.bin"
 mid_size_file="large_file_500.bin"
 large_file="large_file_1000.bin"
 
-SUT_IP=$(gcloud compute instances describe $SUTinstanceName --zone='europe-west3-c' --format='get(networkInterfaces[0].accessConfigs[0].natIP)' --quiet)
+SUT_IP=$(gcloud compute instances describe $loadBalancerInstanceName --zone='europe-west3-c' --format='get(networkInterfaces[0].accessConfigs[0].natIP)' --quiet)
 echo "SUT IP is " $SUT_IP
 
 

@@ -1,4 +1,4 @@
-clientInstanceName="client-r10"
+clientInstanceName="client-r1"
 
 
 echo "Client Instance Name: $clientInstanceName"
