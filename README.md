@@ -1,6 +1,6 @@
-# Project Name
+# Benchmarking Request handling, Throughput and Latency of NGINX under various request loads.
 
-A brief description of what the project does.
+System Under Test (SUT): A Java-based load generator sends HTTP GET Requests to an NGINX server hosting static, bin, jpg files.
 
 ## Table of Contents
 
