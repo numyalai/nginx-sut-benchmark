@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Server Information</title>
+    <style>
+        body {
+            width: 35em;
+            margin: 0 auto;
+            font-family: Tahoma, Verdana, Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Server Information</h1>
+    <p>This server is serving files using Nginx.</p>
+
+    <h2 id="serverDetails">Server Details:</h2>
+    <ul>
+        <li id="hostname">Hostname: Loading...</li>
+        <li id="ipAddress">IP Address: Loading...</li>
+        <li id="port">Port: Loading...</li>
+    </ul>
+
+    <p>For more information about Nginx, please refer to
+        <a href="http://nginx.org/">nginx.org</a>.</p>
+
+    <p><em>Thank you for visiting!</em></p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("hostname").innerText = "Hostname: " + location.hostname;
+            document.getElementById("ipAddress").innerText = "IP Address: " + location.host.split(":")[0];
+            document.getElementById("port").innerText = "Port: " + location.port;
+        });
+    </script>
+</body>
+</html>
