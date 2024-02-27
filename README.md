@@ -72,3 +72,71 @@ To run this project locally, follow these steps:
 5. ./startClient.sh  indicating the suffix for the run client-r1, 
 6. ./startSUT.sh 1 -> indicatign the suffic for the sut vm
 
+
+git clone [https://github.com/numyalai/nginx-sut-benchmark/]
+cd nginx-sut-benchmark
+
+
+
+
+Running the Experiment:
+There are two ways to run the experiment:
+
+A. Using Terraform:
+
+cd terraform
+terraform init
+terraform plan
+terraform apply --auto-approve
+terraform destroy --auto-approve
+
+
+chmod +x prepare_sut_benchmark.sh
+./prepare_sut_benchmark.sh 1
+# Wait until the script finishes executing
+cd ../
+chmod +x runBenchmark.sk
+./runBenchmark.sh
+
+
+
+B. Manually Running the Scripts:
+chmod +x startClient.sh
+chmod +x startSUT.sh 
+./startClient.sh 1 # indicating the suffix for the run client-r1
+./startSUT.sh 1   # indicating the suffix for the sut vm
+./runBenchmark.sh
+./getResults.sh 1 ~/results
+
+
+
+Additional Setup for Load Balancer:
+In addition to the above setup, you can run the experiment with Nginx as a Load Balancer to the NGINX web server backends.
+
+1. Provision Instances:
+Uncomment the instance creation code in the Terraform script to provision as many instances as needed for the experiment.
+
+chmod +x prepare_sut_benchmark.sh
+./prepare_sut_benchmark.sh 1
+./prepare_sut_benchmark.sh 2
+./prepare_sut_benchmark.sh 3
+
+
+
+2. Provision Load Balancer:
+chmod +x startLoadBalancer.sh 
+./startLoadBalancer.sh
+
+
+Update the nginx_lb.conf file upstream directive with the external IP addresses of the SUT instances.
+
+chmod +x runLoadBalancerBenchmark.sh
+./runLoadBalancerBenchmark.sh
+
+
+Result Analysis:
+Finally, run:
+
+./getResults.sh 1 ~/results
+
+
