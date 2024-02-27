@@ -15,7 +15,24 @@ System Under Test (SUT): A Java-based load generator sends HTTP GET Requests to 
 
 ## Introduction
 
-This project is a sample application that demonstrates how to use [technology or framework]. It provides a basic understanding of [topic or functionality] and serves as a starting point for building more complex applications.
+# Benchmark Design
+
+## Various Experimental Setups
+
+- Concurrency Levels: 5, 10, 100
+- Test Durations: 0.5, 10, 60 minutes
+
+## Load Generator Implementation
+
+The load for the System Under Test (SUT) is generated using Java's `HttpClient` and `HttpUrlConnection` libraries.
+
+## Measurement Metrics
+
+The following metrics are measured during the benchmark:
+
+- **Latency**: The time taken for a request to be fulfilled by the SUT.
+- **Throughput**: The number of requests processed by the SUT per unit of time.
+
 
 ## Features
 
