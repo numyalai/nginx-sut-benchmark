@@ -50,34 +50,7 @@ To run this project locally, follow these steps:
    git clone [https://github.com/numyalai/nginx-sut-benchmark/]
    ```
 
-   cd nginx-sut-benchmar
-
-    There are two ways to run the experiment 1. using terraform 2. by running the scripts manually
-
-2. 
-   cd terraform
-   terraform init
-   terraform plan
-   terraform apply --auto-approve
-   terraform destroy --auto-approve
-     
-   chmod +x prepare_sut_benchmark.sh
-   ./prepare_sut_benchmark.sh
-   wait until the script finishes executing
-   cd ../
-   chmod +x runBenchmark.sk
-   ./runBenchmark.sh
-3. chmod +x startClient.sh 1
-4. chmod +x startSUT.sh 
-5. ./startClient.sh  indicating the suffix for the run client-r1, 
-6. ./startSUT.sh 1 -> indicatign the suffic for the sut vm
-
-
-git clone [https://github.com/numyalai/nginx-sut-benchmark/]
-cd nginx-sut-benchmark
-
-
-
+   cd nginx-sut-benchmak
 
 Running the Experiment:
 There are two ways to run the experiment:
@@ -136,6 +109,8 @@ chmod +x runLoadBalancerBenchmark.sh
 
 Result Analysis:
 Finally, run:
+
+
 
 ./getResults.sh 1 ~/results
 
