@@ -105,8 +105,11 @@ chmod +x startLoadBalancer.sh
 ./startLoadBalancer.sh
 ```
 
+
 Update the nginx_lb.conf file upstream directive with the external IP addresses of the SUT instances, you can get the ip addresses from the gcloud UI or with:
+```bash
 SUT_IP=$(gcloud compute instances describe $SUTinstanceName --zone='europe-west3-c' --format='get(networkInterfaces[0].accessConfigs[0].natIP)' --quiet)
+```
 
 
 ```bash
