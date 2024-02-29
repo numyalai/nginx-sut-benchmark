@@ -67,22 +67,32 @@ terraform destroy --auto-approve
 ```
 
 
+
+```bash
 chmod +x prepare_sut_benchmark.sh
 ./prepare_sut_benchmark.sh 1
+```
+
 ### Wait until the script finishes executing
+
+```bash
 cd ../
 chmod +x runBenchmark.sk
 ./runBenchmark.sh
+```
 
-B. Manually Running the Scripts:
+## B. Manually Running the Scripts:
+```bash
 chmod +x startClient.sh
 chmod +x startSUT.sh 
 ./startClient.sh 1 # indicating the suffix for the run client-r1
 ./startSUT.sh 1   # indicating the suffix for the sut vm
-./runBenchmark.sh
+./runBenchmark.sh 1
 ./getResults.sh 1 ~/results
+```
 
-Additional Setup for Load Balancer:
+
+### Additional Setup for Load Balancer:
 In addition to the above setup, you can run the experiment with Nginx as a Load Balancer to the NGINX web server backends.
 
 1. Provision Instances:
