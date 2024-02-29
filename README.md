@@ -17,9 +17,10 @@ System Under Test (SUT): A Java-based load generator sends HTTP GET Requests to 
 # Benchmark Design
 
 ## Various Experimental Setups
-
-- Concurrency Levels: 5, 10, 100
-- Test Durations: 0.5, 10, 60 minutes
+- File sizes, 1mb, 10mb, 50mb
+- Concurrency Levels: 1-10, 1-50, 1-100, 1-1000
+- Test Durations: 5, 10, 30, 60 minutes
+- ramp up interval: 2, 10,15 seconds
 
 ## Load Generator Implementation
 
