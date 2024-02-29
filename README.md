@@ -7,7 +7,6 @@ System Under Test (SUT): A Java-based load generator sends HTTP GET Requests to 
 - [Project Name](#project-name)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
-  - [Features](#features)
   - [Installation](#installation)
   - [Usage](#usage)
   - [Contributing](#contributing)
@@ -34,15 +33,10 @@ The following metrics are measured during the benchmark:
 - **Throughput**: The number of requests processed by the SUT per unit of time.
 
 
-## Features
-
-- Feature 1
-- Feature 2
-- Feature 3
 
 ## Installation
 
-To run this project locally, follow these steps:
+To run this project experiment, follow these steps:
 
 1. Clone the repository:
 
@@ -50,13 +44,10 @@ To run this project locally, follow these steps:
    git clone [https://github.com/numyalai/nginx-sut-benchmark/]
    cd nginx-sut-benchmak
    ```
-
-   cd nginx-sut-benchmak
-
 Running the Experiment:
 There are two ways to run the experiment:
 
-A. Using Terraform:
+## A. Using Terraform:
 
 ```bash
 cd terraform
@@ -65,8 +56,6 @@ terraform plan
 terraform apply --auto-approve
 terraform destroy --auto-approve
 ```
-
-
 
 ```bash
 chmod +x prepare_sut_benchmark.sh
