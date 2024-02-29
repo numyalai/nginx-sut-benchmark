@@ -48,6 +48,7 @@ To run this project locally, follow these steps:
 
    ```bash
    git clone [https://github.com/numyalai/nginx-sut-benchmark/]
+   cd nginx-sut-benchmak
    ```
 
    cd nginx-sut-benchmak
@@ -57,6 +58,7 @@ There are two ways to run the experiment:
 
 A. Using Terraform:
 
+```bash
 cd terraform
 terraform init
 terraform plan
@@ -103,8 +105,6 @@ chmod +x runLoadBalancerBenchmark.sh
 
 Result Analysis:
 Finally, run:
-
-
 
 ./getResults.sh 1 ~/results
 
