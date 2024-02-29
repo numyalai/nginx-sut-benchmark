@@ -64,6 +64,7 @@ terraform init
 terraform plan
 terraform apply --auto-approve
 terraform destroy --auto-approve
+```
 
 
 chmod +x prepare_sut_benchmark.sh
