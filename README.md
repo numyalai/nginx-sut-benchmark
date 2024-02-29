@@ -58,6 +58,7 @@ terraform destroy --auto-approve
 ```
 
 ```bash
+After applyging terraform wait until nginx is being installed 
 chmod +x prepare_sut_benchmark.sh
 ./prepare_sut_benchmark.sh 1
 ```
@@ -101,7 +102,9 @@ chmod +x startLoadBalancer.sh
 ./startLoadBalancer.sh
 ```
 
-Update the nginx_lb.conf file upstream directive with the external IP addresses of the SUT instances.
+Update the nginx_lb.conf file upstream directive with the external IP addresses of the SUT instances, you can get the ip addresses from the gcloud UI or with:
+SUT_IP=$(gcloud compute instances describe $SUTinstanceName --zone='europe-west3-c' --format='get(networkInterfaces[0].accessConfigs[0].natIP)' --quiet)
+
 
 ```bash
 chmod +x runLoadBalancerBenchmark.sh
