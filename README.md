@@ -1,4 +1,4 @@
-# Benchmarking Request handling, Throughput and Latency of NGINX under various request loads.
+![image](https://github.com/numyalai/nginx-sut-benchmark/assets/22469784/104c6d8b-4288-4d45-b774-9a20d6b3bf60)# Benchmarking Request handling, Throughput and Latency of NGINX under various request loads.
 
 System Under Test (SUT): A Java-based load generator sends HTTP GET Requests to an NGINX server hosting static, bin, jpg files.
 
@@ -32,6 +32,8 @@ The following metrics are measured during the benchmark:
 
 - **Latency**: The time taken for a request to be fulfilled by the SUT.
 - **Throughput**: The number of requests processed by the SUT per unit of time.
+- **TransferRate**: (Kbytes/sec)
+- **Iteration_execution_time**
 
 
 
