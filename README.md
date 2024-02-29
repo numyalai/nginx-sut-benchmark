@@ -1,4 +1,4 @@
-![image](https://github.com/numyalai/nginx-sut-benchmark/assets/22469784/104c6d8b-4288-4d45-b774-9a20d6b3bf60)# Benchmarking Request handling, Throughput and Latency of NGINX under various request loads.
+# Benchmarking Request handling, Throughput and Latency of NGINX under various request loads.
 
 System Under Test (SUT): A Java-based load generator sends HTTP GET Requests to an NGINX server hosting static, bin, jpg files.
 
