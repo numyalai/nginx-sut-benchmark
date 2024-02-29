@@ -1,5 +1,5 @@
 provider "google" {
-  project     = "uplifted-stream-406713"
+  project     = "digital-hall-415814"
   region = "europe-west3"
   zone = "europe-west3-c"
 
@@ -31,7 +31,7 @@ resource "google_compute_instance" "nginx" {
   boot_disk {
     initialize_params {
       image = "projects/debian-cloud/global/images/debian-12-bookworm-v20240213"
-      size = 10
+      size = 40
       type="pd-balanced"
     }
   }
@@ -107,7 +107,7 @@ resource "google_compute_instance" "client" {
   boot_disk {
     initialize_params {
       image = "projects/debian-cloud/global/images/debian-12-bookworm-v20240213"
-      size = 10
+      size = 40
       type="pd-balanced"
     }
   }

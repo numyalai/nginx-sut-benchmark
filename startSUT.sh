@@ -35,5 +35,7 @@ gcloud compute ssh $SUTinstanceName --zone europe-west3-c -- 'sudo mv /tmp/index
 gcloud compute ssh $SUTinstanceName --zone europe-west3-c -- '
     sudo dd if=/dev/zero of=/etc/nginx/files/1kb.bin bs=1K count=1 &&
     sudo dd if=/dev/zero of=/etc/nginx/files/1mb.bin bs=1M count=1 &&
-    sudo dd if=/dev/urandom of=/etc/nginx/files/large_file_500.bin bs=1M count=500 &&
-    sudo dd if=/dev/urandom of=/etc/nginx/files/large_file_1000.bin bs=1M count=1000'
+    sudo dd if=/dev/zero of=/etc/nginx/files/large_file_10.bin bs=1M count=10 &&
+    sudo dd if=/dev/zero of=/etc/nginx/files/large_file_50.bin bs=1M count=50 &&
+    sudo dd if=/dev/zero of=/etc/nginx/files/large_file_100.bin bs=1M count=100
+    '
