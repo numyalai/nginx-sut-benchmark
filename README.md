@@ -98,25 +98,33 @@ In addition to the above setup, you can run the experiment with Nginx as a Load 
 1. Provision Instances:
 Uncomment the instance creation code in the Terraform script to provision as many instances as needed for the experiment.
 
+```bash
 chmod +x prepare_sut_benchmark.sh
 ./prepare_sut_benchmark.sh 1
 ./prepare_sut_benchmark.sh 2
 ./prepare_sut_benchmark.sh 3
+```
 
+## 2. Provision Load Balancer:
 
-2. Provision Load Balancer:
+```bash
 chmod +x startLoadBalancer.sh 
 ./startLoadBalancer.sh
+```
 
 Update the nginx_lb.conf file upstream directive with the external IP addresses of the SUT instances.
 
+```bash
 chmod +x runLoadBalancerBenchmark.sh
 ./runLoadBalancerBenchmark.sh
+```
 
 
 Result Analysis:
 Finally, run:
 
+```bash
 ./getResults.sh 1 ~/results
+```
 
 
